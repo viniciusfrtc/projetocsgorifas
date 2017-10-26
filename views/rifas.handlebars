@@ -1,0 +1,31 @@
+<body>
+  <table border="1">
+    <tr>
+      <th> Sorteios em aberto </th>
+      <th> Números ocupados</th>
+      <th> Número máximo</th>
+      <th> Vencedor</th>
+    </tr>
+    {{#each rifas}}
+    <tr>
+      <td>{{premio.mktname}}</td>
+      <td>{{qtdinic}}</td>
+      <td>{{qtdmax}}</td>
+      <td>{{vencedor.nome}}</td>
+      {{#if ativa}}
+      <td>
+        <form method="post" action="/painel/rifas/comprar/" class="container mt-3 mb-5">
+          <div class="form-group">
+            <input type="hidden" class="form-control" name="rifaid" value={{_id}}>
+          </div>
+          <button type="submit" class="btn btn-primary">Comprar</button>
+        </form>
+      </td>
+      {{/if}}
+    </tr>
+    {{/each}}
+  </table>
+
+      <p> <a href="/painel">Voltar </a></p>
+
+</body>

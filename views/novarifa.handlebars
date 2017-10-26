@@ -1,0 +1,19 @@
+
+<form method="post" action="/painel/novarifa" class="container mt-3 mb-5">
+  <h2>Criar rifa:</h2>
+
+  <div>
+
+
+    <select name="premio">
+      {{#each inventario}}
+      <option value="{{this}}">{{this}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="form-group">
+    <input type="number" class="form-control" name="tickets">
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+  <a href="/painel">Voltar</a>
+</form>

@@ -1,0 +1,17 @@
+
+{{#if admin}}
+
+<p> Olá, Admin! </p>
+
+<p><a class="nav-link" href="/painel/rifas">Ver rifas</a></p>
+<p><a class="nav-link" href="/painel/premios">Ver prêmios</a></p>
+<p><a class="nav-link" href="/painel/novarifa">Criar rifas</a></p>
+
+{{else}}
+
+
+<p> Seja bem vindo, {{user}}! </p>
+
+<p><a class="nav-link" href="/painel/rifas">Ver rifas</a></p>
+<p><a class="nav-link" href="/painel/premios">Ver prêmios</a></p>
+{{/if}}

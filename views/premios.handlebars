@@ -1,0 +1,28 @@
+<body>
+  <table border="1">
+    <tr>
+      <th> Prêmios ganhos </th>
+    </tr>
+    {{#each vitorias}}
+    <tr>
+      <td>{{premio.mktname}}</td>
+      {{#if visivel}}
+      <td>
+        <form method="post" action="/painel/premios/enviar/" class="container mt-3 mb-5">
+          <div class="form-group">
+            <input type="hidden" class="form-control" name="rifaid" value={{_id}}>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="tradeurl" placeholder="insira sua trade URL">
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </td>
+      {{/if}}
+    </tr>
+    {{/each}}
+  </table>
+
+      <p> <a href="/painel">Voltar </a></p>
+
+</body>
